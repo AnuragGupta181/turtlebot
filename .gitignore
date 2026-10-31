@@ -1,0 +1,16 @@
+# colcon
+build/
+install/
+log/
+
+# Upstream repos pulled with vcstool
+src/external/
+
+# Python
+__pycache__/
+*.pyc
+
+# Large media (full videos are uploaded elsewhere)
+media/*.mkv
+media/*.webm
+media/*_raw.*
