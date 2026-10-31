@@ -2,7 +2,13 @@
 
 TurtleBot3 (burger) navigating autonomously in Gazebo with the ROS 2 Navigation2 stack. The robot localizes on a prebuilt map, plans a route through a set of waypoints, and avoids obstacles that are not in the map.
 
-Demo video: _link coming soon_
+Demo video: [Google Drive](https://drive.google.com/file/d/1pZclG9STVNvwEOh_FhREtxIMToPUn9KJ/view?usp=drive_link)
+
+| Gazebo | RViz |
+|---|---|
+| ![Gazebo with the robot, LiDAR rays and extra obstacles](assets/gazebo.png) | ![RViz with the costmap, planned path and Nav2 status](assets/rviz.png) |
+
+In Gazebo the red boxes and the orange cylinder are the extra obstacles that are not in the saved map. In RViz the robot has localized, planned a path, and Nav2 reports navigation, localization and feedback as active. The full log of a patrol run is in [docs/patrol_log.md](docs/patrol_log.md).
 
 ## Stack
 
@@ -19,6 +25,8 @@ Demo video: _link coming soon_
 Nothing here re-implements navigation. The package only wires together existing upstream packages and provides its own world, map, parameters, and a small goal sender.
 
 ```
+assets/                      screenshots used in this README
+docs/                        run logs
 scripts/                     helper scripts (install, env, build, run)
 src/navturtle_bringup/
   launch/sim_nav.launch.py   Gazebo + robot + Nav2 + RViz in one launch
